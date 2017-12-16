@@ -34,5 +34,7 @@ available online. The resources below were invaluable for me and hopefully will 
 to anyone viewing this who wants to learn more about bare metal programming on the pi:
 
 [University of Cambridge - Baking Pi](https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/os/index.html)
+
 [VALVERS' Bare Metal Programming in C](http://www.valvers.com/open-software/raspberry-pi/step01-bare-metal-programming-in-cpt1/)
+
 [Raspberry Pi Bare Metal Programming Forums](https://www.raspberrypi.org/forums/viewforum.php?f=72)
