@@ -5,8 +5,11 @@ programming using C and ARM assembly with the Raspberry Pi Zero as the target
 hardware. The binary produced is a kernel image that is intended to replace the
 `kernel.img` file that is shipped with the current Raspberry Pi firmware.
 
+## Current Status
+
 This is a work in progress and is intended as a learning exercise more than
-anything. Presently, it does little more than draw to the screen.
+anything. Presently, the kernel initializes a 1920x1080, 32-bit depth frame
+buffer and then outputs `Hello, world!`.
 
 # Compiling and Running 
 

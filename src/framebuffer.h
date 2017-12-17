@@ -28,5 +28,6 @@ typedef struct {
 
 void initializeFrameBuffer (fb_info_t * fbInfo, uint32_t width, uint32_t height, uint32_t depth);
 void drawSquareLoop (fb_info_t * fbInfo);
+void fbPutPixel (fb_info_t * fbInfo, uint32_t x, uint32_t y, uint32_t color);
 
 #endif

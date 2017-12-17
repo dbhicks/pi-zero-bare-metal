@@ -26,6 +26,9 @@ ${c_objs}: ${build_dir}%.o:${src_dir}%.c
 ${asm_objs}: ${build_dir}%.o:${src_dir}%.s
 	${cc}-as $^ -o $@
 
+kernel-dump: ${kernel}
+	${cc}-objdump -D ${build_dir}kernel.elf > ${build_dir}kernel.dump
+
 clean:
 	rm -f ${build_dir}*
 	rm -f ${dist_dir}*
