@@ -6,6 +6,7 @@
 
 #include "framebuffer.h"
 #include "mailbox.h"
+#include "ascii.h"
 
 /* defined in the linker script */
 extern int _bss_start_;
@@ -18,8 +19,8 @@ extern int _bss_end_;
  */
 void init ()
 {
-  uint32_t * bss = (uint32_t *) _bss_start_;
-  uint32_t * bssEnd = (uint32_t *) _bss_end_;
+  int * bss = &_bss_start_;
+  int * bssEnd = &_bss_end_;
 
   while (bss < bssEnd) {
     *bss = 0;
@@ -36,8 +37,8 @@ void kernel_main ()
   init();
 
   fb_info_t fbInfo;
-  initializeFrameBuffer(&fbInfo, 800, 600, 32);
-  drawSquareLoop(&fbInfo);
+  initializeFrameBuffer(&fbInfo, 1920, 1080, 32);
+  renderString(&fbInfo, "Hello, world!");
 
   while (1);
 }

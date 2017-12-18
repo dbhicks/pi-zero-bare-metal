@@ -52,3 +52,22 @@ void drawSquareLoop (fb_info_t * fbInfo)
     }
   }
 }
+
+
+/*
+ *  Draw an individual pixel to a framebuffer
+ *
+ *  Params: fbInfo  - pointer to the framebuffer info struct defining the 
+ *                    framebuffer to write to
+ *          x       - x coordinate of the pixel 
+ *          y       - y coordinate of the pixel
+ *          color   - the color to write
+ *
+ */
+void fbPutPixel (fb_info_t * fbInfo, uint32_t x, uint32_t y, uint32_t color)
+{
+  /* get the byte offset of the pixel and write in the color */
+  uint32_t offset = (y * fbInfo->pitch) + (x << 2);
+  uint32_t * pixel = (uint32_t *) (fbInfo->fb + offset);
+  *pixel = color;
+}
